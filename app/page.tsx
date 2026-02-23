@@ -32,7 +32,7 @@ export default function Home() {
       setActivity("");
     }
   }
- async function deleteTask(id) {
+ async function deleteTask(id: any) {
   // This adds a pop-up confirmation
   const confirmed = window.confirm("Are you sure you want to delete this task?");
   
