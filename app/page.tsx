@@ -5,7 +5,7 @@ import { supabase } from "../client";
 export default function Home() {
 
   const [name, setName] = useState("");
-  const [activity, setActivity] = useState("");
+  const [activity, setActivity] = useState<string>("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
 
@@ -70,7 +70,7 @@ export default function Home() {
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2 text-left">Task Activity</label>
-                <textarea className="shadow border rounded w-full py-2 px-3 text-gray-700" rows="3" placeholder="What needs to be done?" value={activity}
+                <textarea className="shadow border rounded w-full py-2 px-3 text-gray-700" rows={3} placeholder="What needs to be done?" value={activity}
                             onChange={(e) => setActivity(e.target.value)}></textarea>
               </div>
               <div className="mb-4">
